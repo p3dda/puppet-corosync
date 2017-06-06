@@ -107,6 +107,7 @@ NWyN0RsTXFaqowV1/HSyvfD7LoF/CrmN5gOAM3Ierv/Ti9uqGVhdGBd/kw=='
       context 'with all the parameters' do
         let(:xpath) { "/cib/configuration/resources/clone[@id=\"duncan_vip_complex_clone_#{type}\"]" }
         let(:fetch_clone_command) { "cibadmin --query --xpath '#{xpath}'" }
+
         def fetch_value_command(name)
           "cibadmin --query --xpath '#{xpath}/meta_attributes/nvpair[@name=\"#{name}\"]'"
         end
